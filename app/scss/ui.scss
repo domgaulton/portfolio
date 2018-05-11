@@ -5,10 +5,20 @@
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 
   &:hover {
     background: black;
     color: white;
+  }
+
+  &__secondary {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
   }
 }
