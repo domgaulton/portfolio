@@ -1,0 +1,40 @@
+.homepage__intro {
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    text-align: left;
+  }
+}
+
+.hp-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
+  &__project {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      max-height: 720px;
+      text-align: left;
+      width: 48%;
+      margin: 30px 1%;
+    }
+
+    &-image {
+      width: 98%;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+    }
+  }
+}
+

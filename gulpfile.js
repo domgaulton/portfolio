@@ -26,7 +26,7 @@ gulp.task('clean', function () {
 // Copy HTML to Dist //
 
 gulp.task('copy-html', function () {
-    gulp.src('index.html')
+    gulp.src('**.html')
         .pipe(gulp.dest(config.dist));
 });
 
