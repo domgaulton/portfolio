@@ -1,0 +1,14 @@
+.header {
+	padding: 30px;
+	text-align: center;
+
+	&__logo {
+		display: block;
+		width: 100px;
+		margin: 0px auto;
+	}
+
+	&__subtitle {
+		color: $grey;
+	}
+}

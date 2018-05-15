@@ -38,5 +38,22 @@
       min-height: 100px;
     }
   }
+
+  &__development {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @media (min-width: $screen-md) {
+      max-height: 300px;
+      width: 30%;
+      margin: 30px 1%;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+      min-height: 50px;
+    }
+  }
 }
 
