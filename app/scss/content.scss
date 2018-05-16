@@ -4,6 +4,7 @@
 
 	@media (min-width: $screen-md) {
 		width: 80%;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
@@ -18,9 +19,9 @@
 	}
 
 	&__header {
-		margin-top: 40px;
+		margin: 40px 0;
 		text-align: center;
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px solid $light-grey;
 		padding-bottom: 30px;
 	}
 
@@ -51,6 +52,5 @@
 	&__award {
 		position: fixed;
 		right: 0;
-
 	}
 }
