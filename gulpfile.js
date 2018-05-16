@@ -26,7 +26,7 @@ gulp.task('clean', function () {
 // Copy HTML to Dist //
 
 gulp.task('copy-html', function () {
-    gulp.src('**.html')
+    gulp.src(config.app+'**.html')
         .pipe(gulp.dest(config.dist));
 });
 
@@ -48,7 +48,7 @@ gulp.task('sass', function () {
 // Browser Sync //
 
 gulp.task('browser-sync', ['clean'],function() {  
-    browserSync.init([config.app+'scss/*.scss', config.app+'js/*.js', '*.html'], {
+    browserSync.init([config.app+'scss/*.scss', config.app+'js/*.js', config.app+'*.html'], {
         server: {
             baseDir: config.dist
         }
@@ -69,7 +69,7 @@ gulp.task('scripts', function(){
 // Watch files for changes //
 
 gulp.task('watch', function(){
-    gulp.watch('*.html', ['copy-html']);
+    gulp.watch(config.app+'*.html', ['copy-html']);
     gulp.watch(config.app+'scss/**/*.scss', ['sass']);
     gulp.watch(config.app+'js/**/*.js', ['scripts']);
 })
