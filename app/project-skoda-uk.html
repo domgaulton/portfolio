@@ -8,8 +8,21 @@
 </head>
 <body>
 	
+	<nav class="navigation">
+		<ul class="navigation__items">
+			<li><a href="/">Home / Projects</a></li>
+			<li><a href="https://github.com/domgaulton">GitHub</a></li>
+			<li><a href="/#dev">Development</a></li>
+		</ul>
+		<div class="navigation__ui">
+			<div class="navigation__ui--line nav-line-1"></div>
+			<div class="navigation__ui--line nav-line-2"></div>
+			<div class="navigation__ui--line nav-line-3"></div>
+		</div>
+	</nav>
+
 	<header class="header">
-		<img class="header__logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Skoda_Auto_logo_%282011%29.svg/1200px-Skoda_Auto_logo_%282011%29.svg.png">
+		<img class="header__logo" src="img/projects/skoda/desktop/skoda-logo.png">
 		<h1 class="header__title">ŠKODA UK - Lead Developer for 4+ Years </h1>
 		<p class="header__subtitle">Sharepoint | JIRA | Lead Development | Google Analytics | Google Tag Manager | KPIs</p>
 	</header>
@@ -45,15 +58,19 @@
 		<div class="projects">
 			<section class="projects__project">
 				<h3 class="projects__project-header">ŠKODA Pattern Library</h3>
-				<img class="projects__project-image" src="img/projects/skoda/pattern-library/skoda-pattern-library.jpg">
-				<p class="projects__project-description">Cras euismod, ex sit amet ullamcorper lobortis, magna ipsum interdum dui, nec laoreet justo dui quis turpis. Aliquam pellentesque enim risus.</p>
+				<a href="project-skoda-pattern-library.html">
+					<img class="projects__project-image" src="img/projects/skoda/pattern-library/skoda-pattern-library.jpg">
+				</a>
+				<p class="projects__project-description">A fully responsive set of reviewed and tested webparts that can be used across the seperate desktop and mobile ŠKODA platforms.</p>
 				<a class="hp-projects__project-cta cta" href="project-skoda-pattern-library.html">Read more</a>
 			</section>
 
 			<section class="projects__project">
 				<h3 class="projects__project-header">ŠKODA Alternative Rich List</h3>
-				<img class="projects__project-image" src="img/projects/skoda/alternative-rich-list/alternative-rich-list.jpg">
-				<p class="projects__project-description">Cras euismod, ex sit amet ullamcorper lobortis, magna ipsum interdum dui, nec laoreet justo dui quis turpis. Aliquam pellentesque enim risus.</p>
+				<a href="project-skoda-alternative-rich-list.html">
+					<img class="projects__project-image" src="img/projects/skoda/alternative-rich-list/alternative-rich-list.jpg">
+				</a>
+				<p class="projects__project-description">The Alternative Rich List features in The Sunday Times. It highlights indivduals who are motivated by more than money by showing people that live the true values of the ŠKODA brand.</p>
 				<a class="projects__project-cta cta" href="project-skoda-alternative-rich-list.html">Read more</a>
 			</section>
 		</div>
@@ -64,6 +81,36 @@
 
 	</footer>
 
+	<script>
+
+		const navMenu = document.querySelector('.navigation__ui');
+		const navLines = document.querySelectorAll('.navigation__ui--line');
+		const navLine1 = document.querySelector('.nav-line-1');
+		const navLine2 = document.querySelector('.nav-line-2');
+		const navLine3 = document.querySelector('.nav-line-3');
+		const navItems = document.querySelector('.navigation__items');
+
+		function toggleNav() {
+		  navItems.classList.toggle('active');
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		function toggleMenu(e) {
+		  // console.log(e.propertyName);
+		  const transitionType = e.propertyName;
+		  if (transitionType !== 'transform') return;
+		  console.log("once");
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		navMenu.addEventListener('click', toggleNav);
+		//navItems.addEventListener('transitionend', toggleMenu);
+
+	</script>
 	
 <!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>

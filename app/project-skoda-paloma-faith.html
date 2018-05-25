@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-M4Q8T9H');</script>
+	<!-- End Google Tag Manager -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>Dom Gaulton Web Developer</title>
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4Q8T9H"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<nav class="navigation">
+		<ul class="navigation__items">
+			<li><a href="/">Home / Projects</a></li>
+			<li><a href="https://github.com/domgaulton">GitHub</a></li>
+			<li><a href="/#dev">Development</a></li>
+		</ul>
+		<div class="navigation__ui">
+			<div class="navigation__ui--line nav-line-1"></div>
+			<div class="navigation__ui--line nav-line-2"></div>
+			<div class="navigation__ui--line nav-line-3"></div>
+		</div>
+	</nav>
 	
 	<header class="header">
 		<h1 class="header__title">ŠKODA Paloma Faith</h1>
@@ -19,7 +43,7 @@
 			Award Winning
 		</div>
 
-		<p class="content__intro">SKODA UK Cras euismod, ex sit amet ullamcorper lobortis, magna ipsum interdum dui, nec laoreet justo dui quis turpis. Aliquam pellentesque enim risus, vitae eleifend dui consequat eget. Proin consequat fringilla ipsum. Vestibulum sapien elit, dapibus vitae leo ut, eleifend bibendum risus.</p>
+		<p class="content__intro">ŠKODA is Driven By Something Different and celebrates individuals like Paloma Faith who share this attitude - independently minded people who are confident in their own skin and want to make a positive impact on the world around them.</p>
 
 		<img class="content__img" src="img/projects/skoda/paloma-faith/paloma-faith.jpg">
 
@@ -28,13 +52,44 @@
 			<a class="cta cta__secondary" href="http://www.skoda.co.uk/paloma-faith">Live Site</a>
 		</div>
 
-		<p class="content__copy">SKODA UK Cras euismod, ex sit amet ullamcorper lobortis, magna ipsum interdum dui, nec laoreet justo dui quis turpis. Aliquam pellentesque enim risus, vitae eleifend dui consequat eget. Proin consequat fringilla ipsum. Vestibulum sapien elit, dapibus vitae leo ut, eleifend bibendum risus.</p>
+		<p class="content__copy">The page was briefed as a 'content hub' meaning we would be adding content as an when it came in. This meant that I needed to factor this in with naming convention and work out how the page would develop over time without designers.</p>
 	
 	</article>
 
 	<footer>
 
 	</footer>
+
+		<script>
+
+		const navMenu = document.querySelector('.navigation__ui');
+		const navLines = document.querySelectorAll('.navigation__ui--line');
+		const navLine1 = document.querySelector('.nav-line-1');
+		const navLine2 = document.querySelector('.nav-line-2');
+		const navLine3 = document.querySelector('.nav-line-3');
+		const navItems = document.querySelector('.navigation__items');
+
+		function toggleNav() {
+		  navItems.classList.toggle('active');
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		function toggleMenu(e) {
+		  // console.log(e.propertyName);
+		  const transitionType = e.propertyName;
+		  if (transitionType !== 'transform') return;
+		  console.log("once");
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		navMenu.addEventListener('click', toggleNav);
+		//navItems.addEventListener('transitionend', toggleMenu);
+
+	</script>
 
 	
 <!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
